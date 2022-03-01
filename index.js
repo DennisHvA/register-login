@@ -15,6 +15,7 @@ app.set('views', './views')
 // here I use bodyparser to extract the data from the client
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+app.use(express.static('public'))
 // this is the home route
 app.get('/', function(req, res, next) {
   res.render('home')
