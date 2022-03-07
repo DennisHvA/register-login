@@ -4,6 +4,11 @@ const express = require('express')
 const app = express()
 // we need bodyparser to extract data from the client
 const bodyParser = require('body-parser')
+
+const slug = require('slug')
+const multer = require('multer')
+// require('dotenv').config()
+
 // we need a view engine to render template to the client
 const { engine } = require('express-handlebars')
 // we need a port for our server to listen to
@@ -24,6 +29,9 @@ app.get('/', function(req, res, next) {
 app.get('/about', function(req, res, next) {
   res.render('about')
 })
+
+// app.post('/getData', )
+
 // this function inits my server to listen to: localhost:PORT 
 app.listen(PORT, () => {
   console.log('App is listening to port', PORT)
