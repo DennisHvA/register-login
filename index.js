@@ -12,7 +12,7 @@ const multer = require('multer')
 // we need a view engine to render template to the client
 const { engine } = require('express-handlebars')
 // we need a port for our server to listen to
-const PORT = 1337
+const PORT = process.env.PORT || 1337
 // here I specify my templating logic and view engine
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
@@ -25,9 +25,14 @@ app.use(express.static('public'))
 app.get('/', function(req, res, next) {
   res.render('home')
 })
-// this is the about route
-app.get('/about', function(req, res, next) {
-  res.render('about')
+// this is the login route
+app.get('/login', function(req, res, next) {
+  res.render('login')
+})
+
+// this is the register route
+app.get('/register', function(req, res, next) {
+  res.render('register')
 })
 
 // app.post('/getData', )
