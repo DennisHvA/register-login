@@ -11,7 +11,8 @@
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-This is my repository for my backend project
+## 👤 Feature
+### In this repository i made a login and registration feature using a database
 
 ## :computer: Installation
 
@@ -39,5 +40,5 @@ Make an .env file and put it in .gitignore
 Add DB_NAME: 
 Add database connection MONGO_DB: "" 
 ```
-## ⚖️ Licentie 
+## ⚖️ License
 The [MIT](https://github.com/DennisHvA/Blok-tech/blob/main/LICENSE) license is used
