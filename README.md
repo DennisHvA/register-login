@@ -13,5 +13,49 @@
 
 This is my repository for my backend project
 
+## Installation
+23
+
+24
+To install this repository, type: 
+25
+
+26
+```
+27
+Git clone https://github.com/emmaoudmaijer/datingsite
+28
+```
+29
+To install Node modules, type:
+30
+```
+31
+npm install
+32
+```
+33
+To run the application, type
+34
+```
+35
+npm run start
+36
+```
+@emmaoudmaijer
+Update readme.md
+3 years ago
+37
+Make an .env file and put it in .gitignore
+38
+```
+39
+Add DB_NAME: 
+40
+Add database connection MONGO_DB: ""
+41
+Add SESSION_SECRET: 
+42
+```
 ## ⚖️ Licentie 
 Er wordt gebruik gemaakt van de [MIT](https://github.com/DennisHvA/Blok-tech/blob/main/LICENSE) licentie
