@@ -18,37 +18,26 @@ This is my repository for my backend project
 install this repository, type: 
 
 ```
-27
 Git clone https://github.com/dennishva/blok-tech
-28
 ```
 
 To install Node modules, type:
 
 ```
-31
 npm install
-32
 ```
 
 To run the application, type
 
 ```
-35
 npm run start
-36
 ```
 
 Make an .env file and put it in .gitignore
 
 ```
-39
 Add DB_NAME: 
-40
-Add database connection MONGO_DB: ""
-41
-Add SESSION_SECRET: 
-42
+Add database connection MONGO_DB: "" 
 ```
 ## ⚖️ Licentie 
-Er wordt gebruik gemaakt van de [MIT](https://github.com/DennisHvA/Blok-tech/blob/main/LICENSE) licentie
+The [MIT](https://github.com/DennisHvA/Blok-tech/blob/main/LICENSE) license is used
