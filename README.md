@@ -16,19 +16,19 @@
 
 ## :computer: Installation
 
-install this repository, type: 
+install this repository: 
 
 ```
 Git clone https://github.com/dennishva/blok-tech
 ```
 
-To install Node modules, type:
+To install Node modules:
 
 ```
 npm install
 ```
 
-To run the application, type
+To run the application:
 
 ```
 npm run start
