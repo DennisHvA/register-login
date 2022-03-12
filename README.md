@@ -12,7 +12,7 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ## 👤 Feature
-### In this repository i made a login and registration feature using a database
+### In this repository i made a login and registration feature with a database
 
 ## :computer: Installation
 
