@@ -13,41 +13,34 @@
 
 This is my repository for my backend project
 
-## Installation
-23
+## :computer: Installation
 
-24
-To install this repository, type: 
-25
+install this repository, type: 
 
-26
 ```
 27
-Git clone https://github.com/emmaoudmaijer/datingsite
+Git clone https://github.com/dennishva/blok-tech
 28
 ```
-29
+
 To install Node modules, type:
-30
+
 ```
 31
 npm install
 32
 ```
-33
+
 To run the application, type
-34
+
 ```
 35
 npm run start
 36
 ```
-@emmaoudmaijer
-Update readme.md
-3 years ago
-37
+
 Make an .env file and put it in .gitignore
-38
+
 ```
 39
 Add DB_NAME: 
