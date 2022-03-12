@@ -45,7 +45,7 @@ Add DB_NAME:
 Add database connection MONGO_DB: "" 
 ```
 
-https://github-readme-stats.vercel.app/api/top-langs/?username={username}
+https://github-readme-stats.vercel.app/api/top-langs/?dennishva={dennishva}
 
 ## ⚖️ License
 The [MIT](https://github.com/DennisHvA/Blok-tech/blob/main/LICENSE) license is used
