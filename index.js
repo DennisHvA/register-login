@@ -2,8 +2,6 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-// const slug = require('slug');
-// const multer = require('multer');
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 const { engine } = require('express-handlebars');
@@ -64,10 +62,22 @@ app.post('/aangemaakt', async (req, res) => {
   res.redirect('/');
 });
 
-//gebruiker met email uit databas halen
-//wachtwoordern vergelijken
-// als die er is pagina username
-//niet, login
+const email = 'test@test.nl';
+const password = 'test';
+// const username = database.collection('users').findOne({ email: '' });
+// const password = database.collection('users').findOne({ password: '' });
+
+app.post('/ingelogd', async (req, res) => {
+  console.log(req.body);
+  if (req.body.email == email && req.body.password == password) {
+    // Check if the username and password are correct
+    console.log('Valid username and password');
+    res.redirect('/ingelogd');
+  } else {
+    console.log('Invalid username or password');
+    res.redirect('/login');
+  }
+});
 
 // database
 async function connectDB() {
