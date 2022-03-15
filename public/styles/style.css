@@ -2,112 +2,112 @@
 /* ---------------------------- */
 
 *, *::after, *::before {
-    box-sizing:border-box;  
+  box-sizing:border-box;  
 }
 
 html, body {
-    height:100%;
-    margin:0;
+  height:100%;
+  margin:0;
 }
 
 body {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 /* variable */
 /* ---------------------------- */
 
 :root {
-    /* colors */
-    --color-overlay: orange;
-    --color-heading: orange;
-    --color-input-header: orange;
-    --color-placeholder: lightgray;
-    --color-input-border: #ccc;
-    --color-submit: white;
+  /* colors */
+  --color-overlay: orange;
+  --color-heading: orange;
+  --color-input-header: orange;
+  --color-placeholder: lightgray;
+  --color-input-border: #ccc;
+  --color-submit: white;
 }
 
 /* background */
 
 html {
-    background-image: linear-gradient(0deg, rgba(255, 153, 0, 0.6), rgba(255, 153, 0, 0.3)), url(https://scanmovers.com/uploads/blog/images/Groningen%202.jpg); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: linear-gradient(0deg, rgba(255, 153, 0, 0.6), rgba(255, 153, 0, 0.3)), url(https://scanmovers.com/uploads/blog/images/Groningen%202.jpg); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* home */
 
 section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
-    padding: 2em 4em 2em 4em;
-    background-color: white;
-    color: orange;
-    margin: 0.5em;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+  text-decoration: none;
+  padding: 2em 4em 2em 4em;
+  background-color: white;
+  color: orange;
+  margin: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 /* form */
 
 form {
-    width: 20em;
-    background-color: white;
+  width: 20em;
+  background-color: white;
 }
 
 fieldset {
-    border: none;
-    margin-top: 1em;
+  border: none;
+  margin-top: 1em;
 }
 
 legend {
-    color: orange;
-    margin: 0 0 1em;
-    line-height: 1;
-    font-size: 18px;
-    font-weight: 400;
+  color: orange;
+  margin: 0 0 1em;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 input {
-    outline: none;
-    display: block;
-    width: 100%;
-    margin: 0 0 1em;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    color: #ccc;
-    font-family: "Roboto";
-    font-size: 14px;
+  outline: none;
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  font-family: "Roboto";
+  font-size: 14px;
 }
 
 input:focus {
-    color: #333;
-    border: solid;
-    border-color: orange;
+  color: #333;
+  border: solid;
+  border-color: orange;
 }
 
 p {
-    color: orange;
+  color: orange;
 }
 
 input[type=submit] {
-    background-color: orange;
-    border: none;
-    color: white;
+  background-color: orange;
+  border: none;
+  color: white;
 }
 
 input::placeholder {
-    color: lightgray;
+  color: lightgray;
 }
