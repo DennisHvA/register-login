@@ -2,8 +2,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const slug = require('slug');
-const multer = require('multer');
+// const slug = require('slug');
+// const multer = require('multer');
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 const { engine } = require('express-handlebars');
@@ -46,19 +46,28 @@ app.get('/aangemaakt', (req, res, next) => {
   res.render('aangemaakt');
 });
 
-app.post("/aangemaakt", async (req, res) => {
-  await database
-    .collection("users")
-    .insertOne({ email: req.body.email, password: req.body.password });
+app.post('/aangemaakt', async (req, res) => {
+  console.log(req.body);
+  console.log('test');
+  await database.collection('users').insertOne({
+    email: req.body.email,
+    password: req.body.password,
+    passwordrepeat: req.body.passwordrepeat,
+  });
 
   let newUser = await database
-    .collection("users")
+    .collection('users')
     .findOne({ email: req.body.email });
 
   console.log(newUser); // Log the new user to the database
 
-  res.redirect("/");
+  res.redirect('/');
 });
+
+//gebruiker met email uit databas halen
+//wachtwoordern vergelijken
+// als die er is pagina username
+//niet, login
 
 // database
 async function connectDB() {
