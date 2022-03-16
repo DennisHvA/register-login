@@ -44,33 +44,33 @@ app.get('/aangemaakt', (req, res, next) => {
   res.render('aangemaakt');
 });
 
+// register
 app.post('/aangemaakt', async (req, res) => {
   console.log(req.body);
   console.log('test');
   await database.collection('users').insertOne({
     email: req.body.email,
     password: req.body.password,
-    passwordrepeat: req.body.passwordrepeat,
   });
 
   let newUser = await database
     .collection('users')
     .findOne({ email: req.body.email });
 
-  console.log(newUser); // Log the new user to the database
+  console.log(newUser);
 
-  res.redirect('/');
+  res.redirect('/login');
 });
 
+// login
 const email = 'test@test.nl';
 const password = 'test';
-// const username = database.collection('users').findOne({ email: '' });
-// const password = database.collection('users').findOne({ password: '' });
+// const email = database.collection('users').findOne({ email });
+// const password = database.collection('users').findOne({ password });
 
-app.post('/ingelogd', async (req, res) => {
+app.post('/ingelogd', (req, res) => {
   console.log(req.body);
   if (req.body.email == email && req.body.password == password) {
-    // Check if the username and password are correct
     console.log('Valid username and password');
     res.redirect('/ingelogd');
   } else {
