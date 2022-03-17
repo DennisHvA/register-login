@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // routes
+// test
 app.get('/', async (req, res, next) => {
   const user = await database.collection('users').findOne({ email: 'test' });
   console.log(user);

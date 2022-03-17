@@ -19,13 +19,18 @@ body {
 /* ---------------------------- */
 
 :root {
-  /* colors */
-  --color-overlay: orange;
   --color-heading: orange;
+  --color-form: white;
   --color-input-header: orange;
-  --color-placeholder: lightgray;
+  --color-input-text: rgb(126, 126, 126);
+  --color-input-focus: #333;
+  --color-input-focus-border: orange;
+  --color-input-placeholder: lightgray;
   --color-input-border: #ccc;
-  --color-submit: white;
+  --color-button-text: white;
+  --color-button-background: orange;
+  --color-button-hover: rgb(150, 98, 1);
+  --color-input-error: orange;
 }
 
 /* background */
@@ -51,63 +56,79 @@ section {
 a {
   text-decoration: none;
   padding: 2em 4em 2em 4em;
-  background-color: white;
-  color: orange;
+  background-color: var(--color-button-text);
+  color: var(--color-button-background);
+  border-radius: 1em;
   margin: 0.5em;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.15);
 }
 
 /* form */
 
 form {
   width: 20em;
-  background-color: white;
+  background-color: var(--color-form);
+  box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.25);
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
 }
 
 fieldset {
   border: none;
   margin-top: 1em;
+  width: 90%;
 }
 
 legend {
-  color: orange;
-  margin: 0 0 1em;
+  color: var(--color-heading);
+  padding: 1em;
   line-height: 1;
-  font-size: 18px;
+  font-size: 1.5em;
   font-weight: 400;
+  text-align: center;
 }
 
 input {
   outline: none;
   display: block;
   width: 100%;
-  margin: 0 0 1em;
+  margin: 0.5em 0 0em;
   padding: 10px 15px;
-  border: 1px solid #ccc;
-  color: #ccc;
+  border: 1px solid var(--color-input-border);
+  color: var(--color-input-text);
   font-family: "Roboto";
   font-size: 14px;
 }
 
 input:focus {
-  color: #333;
+  color: var(--color-input-focus-border);
   border: solid;
-  border-color: orange;
+  border-color: var();
 }
 
 p {
-  color: orange;
+  color: var(--color-input-error);
 }
 
 input[type=submit] {
-  background-color: orange;
+  background-color: var(--color-button-background);
   border: none;
-  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--color-button-text);
+  margin: 1em 0 1em 0;
+}
+
+input[type=submit]:hover {
+  background-color: var(--color-button-hover);
+  cursor: pointer;
 }
 
 input::placeholder {
-  color: lightgray;
+  color: var(--color-input-placeholder);
 }
