@@ -65,7 +65,7 @@ app.post('/aangemaakt', async (req, res) => {
 
 // login
 const email = 'test@test.nl';
-const password = 'test';
+const password = 'testtest';
 // const email = database.collection('users').findOne({ email });
 // const password = database.collection('users').findOne({ password });
 

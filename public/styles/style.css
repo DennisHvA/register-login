@@ -19,18 +19,14 @@ body {
 /* ---------------------------- */
 
 :root {
-  --color-heading: orange;
+  --color-main: orange;
   --color-form: white;
-  --color-input-header: orange;
   --color-input-text: rgb(126, 126, 126);
   --color-input-focus: #333;
-  --color-input-focus-border: orange;
   --color-input-placeholder: lightgray;
   --color-input-border: #ccc;
   --color-button-text: white;
-  --color-button-background: orange;
   --color-button-hover: rgb(150, 98, 1);
-  --color-input-error: orange;
 }
 
 /* background */
@@ -57,7 +53,7 @@ a {
   text-decoration: none;
   padding: 2em 4em 2em 4em;
   background-color: var(--color-button-text);
-  color: var(--color-button-background);
+  color: var(--color-main);
   border-radius: 1em;
   margin: 0.5em;
   text-align: center;
@@ -85,7 +81,7 @@ fieldset {
 }
 
 legend {
-  color: var(--color-heading);
+  color: var(--color-main);
   padding: 1em;
   line-height: 1;
   font-size: 1.5em;
@@ -106,17 +102,17 @@ input {
 }
 
 input:focus {
-  color: var(--color-input-focus-border);
+  color: var(--color-main);
   border: solid;
   border-color: var();
 }
 
 p {
-  color: var(--color-input-error);
+  color: var(--color-main);
 }
 
 input[type=submit] {
-  background-color: var(--color-button-background);
+  background-color: var(--color-main);
   border: none;
   font-size: 1em;
   font-weight: bold;
