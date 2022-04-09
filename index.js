@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+// database
 const connectDB = require('./config/db');
 connectDB();
 
@@ -31,10 +32,6 @@ app.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.get('/aangemaakt', (req, res) => {
-  res.render('aangemaakt');
-});
-
 app.get('/ingelogd', (req, res) => {
   res.render('ingelogd');
 });
@@ -49,9 +46,10 @@ app.post('/register', async (req, res) => {
       email: email,
       password: password,
     });
+    console.log('made a account');
     return result, res.redirect('/login');
   } catch {
-    console.log('Niet gelukt om een account aan te maken, probeer het nog eens');
+    console.log('failed to make a account');
     res.redirect('register');
   }
 });
@@ -67,23 +65,24 @@ app.post('/login', async (req, res) => {
       if (deGebruiker.password === password) {
         // return deGebruiker
         res.redirect('/ingelogd');
-        console.log('succesvol ingelogd');
+        console.log('logged id');
       } else {
         // return 'invalid password'
-        console.log('fout');
+        res.redirect('/login');
+        console.log('wrong password');
       }
     } else {
       // return 'user was not found'
-      console.log('gebruiker niet gevonden');
+      console.log('user not found');
       res.redirect('/login');
     }
   } catch (err) {
     console.log(err);
-    throw new Error('Er is iets mis gegaan, probeer het later nog eens');
+    throw new Error('something went wrong ...');
   }
 });
 
-// Server luistert op poort 8080
+// port
 app.listen(port, () => {
   console.log('Server running on localhost:1337');
 });
