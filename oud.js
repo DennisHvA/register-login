@@ -51,12 +51,14 @@ app.post('/register', async (req, res) => {
     });
     return result, res.redirect('/login');
   } catch {
-    console.log('Niet gelukt om een account aan te maken, probeer het nog eens');
+    console.log(
+      'Niet gelukt om een account aan te maken, probeer het nog eens'
+    );
     res.redirect('register');
   }
 });
 
-// gebruik van inloggen
+// inloggen
 app.post('/login', async (req, res) => {
   try {
     const deGebruiker = await User.findOne({ email: req.body.email }).lean();
@@ -75,11 +77,9 @@ app.post('/login', async (req, res) => {
     } else {
       // return 'user was not found'
       console.log('gebruiker niet gevonden');
-      res.redirect('/login');
     }
-  } catch (err) {
-    console.log(err);
-    throw new Error('Er is iets mis gegaan, probeer het later nog eens');
+  } catch (error) {
+    throw new Error(error);
   }
 });
 
