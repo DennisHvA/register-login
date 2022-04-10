@@ -1,8 +1,7 @@
 console.log('the client js is connected');
 
-//Progressive Enhancement
+// Progressive Enhancement
 
-// https://www.youtube.com/watch?v=In0nB0ABaUk gebruikt voor de validatie en andere manier van functies schrijven
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
