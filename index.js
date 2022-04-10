@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const { engine } = require('express-handlebars');
-const port = process.env.port || 1337;
 require('dotenv').config();
+const PORT = process.env.PORT || 1337;
 const bodyParser = require('body-parser');
 const User = require('./models/user');
 
@@ -83,6 +83,6 @@ app.post('/login', async (req, res) => {
 });
 
 // port
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log('Server running on localhost:1337');
 });
