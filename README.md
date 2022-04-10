@@ -43,8 +43,8 @@ npm run start
 Make an .env file and put it in .gitignore
 
 ```
-Add DB_NAME: 
-Add database connection MONGO_DB: "" 
+Add database connection DB_URL: "" 
+Add api connection WEATHER_API_KEY: "" 
 ```
 
 ## ⚖️ License
