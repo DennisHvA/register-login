@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 1337;
 const bodyParser = require('body-parser');
 const User = require('./models/user');
 
-// bodyparser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use(express.static('public'));
 
 // database
@@ -54,7 +54,7 @@ app.post('/register', async (req, res) => {
   }
 });
 
-// gebruik van inloggen
+// inloggen
 app.post('/login', async (req, res) => {
   try {
     const deGebruiker = await User.findOne({ email: req.body.email }).lean();
